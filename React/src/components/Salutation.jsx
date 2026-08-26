@@ -2,8 +2,9 @@
 import { useState } from "react";
 
 function Salutation() {
-    
-  const [nom, setNom] = useState("");
+    const [nom, setNom] = useState("");
+  
+
 
   return (
     <div>
