@@ -35,6 +35,14 @@ useEffect(()=>{
 if(chargement) return <p>Chargement en cours...</p>;
 if(erreur) return <p>Erreur:{erreur}</p>;
 
+
+// const utilisateur = {
+//     name:"jephte",
+//     email:"jephte@gmail.com",
+//     ville:"kinshasa"
+// }
+
+
 return(
     <>
     <div>

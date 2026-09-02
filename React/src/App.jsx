@@ -3,24 +3,27 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-import Timing from './components/TroisFormes'
-import FicheUtilisateur from './components/FicheUtilisateur'
-
+import Layout from './composantsNew/Layout'
+import { ThemeProvider } from './ThemeContex'
 
 function App() {
-  let name = "Tresor";
+
+   
 
   return (
     <>
 
-        <div>
-         
-         <Timing/>
-         <FicheUtilisateur/>
+   <ThemeProvider>
+        <div className="page">
+          <h1>demo api context</h1>
+          <p className='sous-titre'>
+            app-layout-sidebar-profil(3niveaux)
+          </p>
+         <Layout/>
         </div>
-
+  </ThemeProvider>
     </>
   )
 }
-
+//APP.JSX(lAYOUT -> SIDEBAR ->PROFIL)
 export default App

@@ -1,9 +1,11 @@
-function Cartes({titre,prix}){
+function Cartes({produit}){
+
+
     return(
     <>
       <div>
-        <h3>{titre}</h3>
-        <p>prix sera{prix}</p>
+        <h3>{produit.titre}</h3>
+        <p>prix sera{produit.prix}</p>
       </div>
     </>
     );
