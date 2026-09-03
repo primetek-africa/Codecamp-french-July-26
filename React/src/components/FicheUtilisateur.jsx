@@ -41,7 +41,8 @@ if(erreur) return <p>Erreur:{erreur}</p>;
 //     email:"jephte@gmail.com",
 //     ville:"kinshasa"
 // }
-
+// DRY
+//a+b
 
 return(
     <>
