@@ -1,36 +1,160 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Installation d'un projet Next.js
 
-## Getting Started
+## 1. Prérequis
 
-First, run the development server:
+Avant de commencer, vérifier que **Node.js** et **npm** sont installés :
+
+```bash
+node -v
+npm -v
+```
+
+Si les deux commandes affichent une version, l'environnement est prêt.
+
+---
+
+## 2. Créer un nouveau projet Next.js
+
+Se placer dans le dossier où le projet doit être créé :
+
+```bash
+cd ~/CODE_CAMPS_FRENCH_REVIEW/Exercice_Github
+```
+
+Créer le projet :
+
+```bash
+npx create-next-app@latest mon-projet
+```
+
+Lors de l'installation, choisir :
+
+```text
+Yes, use recommended defaults
+```
+
+Cette option configure automatiquement notamment :
+
+* TypeScript
+* ESLint
+* Tailwind CSS
+* App Router
+* React
+* Next.js
+
+---
+
+## 3. Entrer dans le projet
+
+```bash
+cd mon-projet
+```
+
+---
+
+## 4. Démarrer le serveur de développement
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le projet sera normalement disponible à l'adresse :
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Ouvrir cette adresse dans le navigateur.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 5. Structure de base
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Après l'installation, on retrouve généralement une structure similaire :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```text
+mon-projet/
+├── app/
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── public/
+├── node_modules/
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── next.config.ts
+├── tsconfig.json
+└── README.md
+```
 
-## Deploy on Vercel
+### Dossiers importants
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**`app/`**
+Contient les pages et la logique principale de l'application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**`public/`**
+Contient les fichiers statiques comme les images.
+
+**`node_modules/`**
+Contient les dépendances installées avec npm. Ce dossier ne doit généralement pas être envoyé sur Git.
+
+---
+
+## 6. Commandes importantes
+
+### Démarrer le projet
+
+```bash
+npm run dev
+```
+
+### Construire le projet pour la production
+
+```bash
+npm run build
+```
+
+### Démarrer la version production
+
+```bash
+npm start
+```
+
+### Installer une nouvelle dépendance
+
+```bash
+npm install nom-du-package
+```
+
+### Mettre à jour les dépendances
+
+```bash
+npm update
+```
+
+---
+
+## 7. En cas de problème d'installation
+
+Si l'installation est interrompue, entrer dans le projet :
+
+```bash
+cd mon-projet
+```
+
+Puis relancer :
+
+```bash
+npm install
+```
+
+Ensuite :
+
+```bash
+npm run dev
+```
+
+> Ne pas interrompre `npm install` avec `Ctrl+C` avant la fin de l'installation.
