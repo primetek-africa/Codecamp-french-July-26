@@ -1,20 +1,11 @@
 export default async function Home() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const res = await fetch('http://localhost:3000/api/hello');
   
-  const posts = await res.json();
-
-
-
-
+  const data = await res.json();
 
   return (
     <>
-    <ol>
-      {posts.slice(0, 10).map(post => (
-        <li key={post.id}>{post.title}</li>
-      ))}
-    </ol>
-
+     <p>consulter depuis: {data.message}</p>
     </>
   );
 }

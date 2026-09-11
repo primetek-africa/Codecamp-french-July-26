@@ -16,3 +16,5 @@ export default async function () {
 //SSR :Server-Side Rendering   
 //NPM RUN BUILD
 //SSG: STATIC SITE GENERATION
+
+//CRUD:creat update delete
