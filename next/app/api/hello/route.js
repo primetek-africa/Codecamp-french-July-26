@@ -4,8 +4,11 @@ export async function GET() {
     
 }
 
+
+//CRUD
 //GET: recuperer les donnees
 //POST : CREATE (poster les donnees)
 //UPDATE: Mise en jours
 //DELETE: Effacer les donnees
+//db.json
 

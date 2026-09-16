@@ -18,3 +18,4 @@ export default async function () {
 //SSG: STATIC SITE GENERATION
 
 //CRUD:creat update delete
+//next(api)->php->mysql(stocker)

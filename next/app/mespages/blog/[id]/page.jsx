@@ -1,3 +1,5 @@
+
+
 export default async function BlogPost({ params }) {
   const { id } = await params;
 
@@ -8,5 +10,9 @@ export default async function BlogPost({ params }) {
 
   const post = await res.json();
 
-  return <h1>{post.title}</h1>;
+  return <>
+  <h1>{post.title}</h1>;
+
+  </>
+
 }
