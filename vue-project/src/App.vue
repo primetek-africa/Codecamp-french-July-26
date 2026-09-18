@@ -1,35 +1,34 @@
 <script setup>
+import Enfant from './components/Enfant.vue';
+import Compteur from './components/Compteur.vue';
+import Form from './components/Form.vue';
 import { ref } from 'vue'
 
-const compteur = ref(0)
 
-function incrementer() {
-  compteur.value++
+function handleSect(user){
+  console.log(user)
 }
+
+const count = ref(0)
+
+function handleIncrement(value){
+  count.value += value
+}
+const name = ref('')
+
 </script>
 
 <template>
-  <h1>Compteur : {{ compteur }}</h1>
+<Form v-model="name"
+/>
+<h1>{{ name }}</h1>
 
-  <button @click="incrementer">
-    Ajouter
-  </button>
+<Enfant @select ="handleSect"/>
+<Compteur 
+:count = "count"
+@increment="handleIncrement"
+/>
+<h1>{{ count }}</h1>
+
 </template>
 
-
-                 VUE.JS
-                    │
-          ┌─────────┴─────────┐
-          │                   │
-       Données             Template
-          │                   │
-        ref()             HTML
-          │                   │
-          └─────────┬─────────┘
-                    │
-              Réactivité
-                    │
-                    ↓
-             Interface mise
-              automatiquement
-               à jour
