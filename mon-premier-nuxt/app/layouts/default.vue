@@ -18,3 +18,5 @@
         </footer>
     </div>
 </template>
+
+//DRY

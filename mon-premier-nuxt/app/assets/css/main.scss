@@ -1,0 +1,45 @@
+@use "variable";
+@use "mixins";
+
+
+.button-primary{
+  @include mixins.button(green)
+}
+.button-secondary{
+  @include mixins.button(red)
+}
+
+//DRY
+.card {
+  background-color: antiquewhite;
+  button{
+    @include mixins.button-base;
+     background: variable.$primary-color;
+     &:hover{
+      background: darkblue;
+     }
+  }
+}
+//mixns
+
+@mixin mobile{
+  @media (max-width: 768px){
+    @content
+  }
+}
+
+est
+
+.contener{
+  max-width: 1200px;
+  margin:auto;
+  display: flex;
+
+  @include mobile{
+    padding: 16px;
+    max-width: 40%;
+     display: grid;
+
+  }
+}
+
