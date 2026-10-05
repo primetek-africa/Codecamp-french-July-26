@@ -10,6 +10,8 @@
 }
 
 //DRY
+
+
 .card {
   background-color: antiquewhite;
   button{
@@ -21,6 +23,7 @@
   }
 }
 //mixns
+
 
 @mixin mobile{
   @media (max-width: 768px){

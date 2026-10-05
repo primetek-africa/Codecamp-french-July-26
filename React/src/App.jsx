@@ -6,10 +6,31 @@ import './App.css'
 import Layout from './composantsNew/Layout'
 import { ThemeProvider } from './ThemeContex'
 import ListUtilisateurs from './composantsNew/ListeUtilisateurs'
+import styled from 'styled-components'
+
+
 function App() {
 
-   
+  //  const Button = styled.button`
+  //    background:blue;
+  //    color:white;
+  //    padding:10px 16px;
+  //  `;
+  const Button =styled.button`
+     background:${(props)=> props.danger ? 'red':'blue'};
+     color:white;
+     padding:10px 16px;
+     &:hover{
+      background:darkblue;
+     }
 
+  `
+const Div = styled.div`
+padding:24px;
+@media (max-width:768px){
+padding:16px;
+}
+`
   return (
     <>
       
@@ -23,6 +44,9 @@ function App() {
          <Layout/>
         <ListUtilisateurs/>
         </div>
+
+        <Button>Enregistrer</Button>
+        <Button danger>Suprimer</Button>
   </ThemeProvider>
     </>
   )
@@ -30,4 +54,4 @@ function App() {
 //APP.JSX(lAYOUT -> SIDEBAR ->PROFIL)
 export default App
 //use
-//
+//npm install -D sass
