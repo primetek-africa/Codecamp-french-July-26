@@ -27,10 +27,24 @@ function App() {
   `
 const Div = styled.div`
 padding:24px;
+display:grid;
+grind-template-columns:repeat(3, 1fr);
+
+
 @media (max-width:768px){
 padding:16px;
 }
+
+@media (max-width:425px){
+grid-template-columns:1fr;
+}
 `
+
+function multiply(a, b) {
+  return a * b
+}
+
+
   return (
     <>
       
