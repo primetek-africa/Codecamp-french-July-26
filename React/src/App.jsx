@@ -7,9 +7,12 @@ import Layout from './composantsNew/Layout'
 import { ThemeProvider } from './ThemeContex'
 import ListUtilisateurs from './composantsNew/ListeUtilisateurs'
 import styled from 'styled-components'
-
+import Welcome from './components/Welcome'
+import Count from './components/Count'
 
 function App() {
+
+
 
   //  const Button = styled.button`
   //    background:blue;
@@ -47,7 +50,9 @@ function multiply(a, b) {
 
   return (
     <>
-      
+
+    <Count/>
+      <Welcome/>
    <ThemeProvider>
     
         <div className="page">
