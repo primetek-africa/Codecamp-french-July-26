@@ -17,3 +17,15 @@ export function isAdult(age){
 //test
 //toEqual()
 //toContain()
+
+/////////////////
+const list = document.getElementById("list")
+
+document.getElementById("send").addEventListener("click",()=>{
+  const value = document.getElementById("comment").value;
+
+  // list.innerHTML += `<p>${value}</p>`
+  const p = document.createElement("p")
+  p.textContent= value;
+  list.appendChild(p)
+})
