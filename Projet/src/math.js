@@ -1,3 +1,26 @@
+import { calculerTotal } from "/calcul.js";
+
+
+const bouton = document.querySelector("#btn-total");
+
+bouton.addEventListener("click", async () => {
+  const module = await import("/calcul.js");
+
+  const total = module.calculerTotal([10, 20, 30]);
+
+  document.querySelector("#resultat").textContent = total;
+});
+
+
+
+//  
+
+
+
+
+
+
+
 export function multiply(a,b){
   return a*b
 }
