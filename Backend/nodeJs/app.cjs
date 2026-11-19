@@ -1,4 +1,4 @@
-//  import os from "node:os"
+//  import http from "http"
 //  import {somme} from "./calcul.cjs";
 //   console.log("5+3",somme(5,3));
 // mon-api/
@@ -21,22 +21,23 @@
 //path:gestion de chemin
 //http creation de servers HTTP
 //...ETC
-const somme = require('./calcul.cjs');
-const resultat = somme(10,20);
-console.log(resultat)
+// const http = require('http')
 
-const fs = require('fs') //writeFile()
-fs.writeFile(
+// const somme = require('./calcul.cjs');
+// const resultat = somme(10,20);
+// console.log(resultat)
 
-  'etutiants.txt',
-  'jean-pierre\nResia\nTresor',
-  (erreur)=>{
-    if(erreur){
-       console.log("Erreur lors de la creation du fichier");
-       return
-    }
-    console.log('Fichier Cree avec succes!!')
-  }
-)
+// const fs = require('fs') //writeFile()
+// fs.writeFile(
 
+//   'etutiants.txt',
+//   'jean-pierre\nResia\nTresor',
+//   (erreur)=>{
+//     if(erreur){
+//        console.log("Erreur lors de la creation du fichier");
+//        return
+//     }
+//     console.log('Fichier Cree avec succes!!')
+//   }
+// )
 
