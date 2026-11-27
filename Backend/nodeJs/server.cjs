@@ -163,5 +163,23 @@
 //npm install express jsonwebtoken bcryptjs dotenv
 //pasword: 12615176 =>incorrect
 
+const express = require('express');
+require('dotenv').config()
+const authRoutes =require('./routes/authRoutes.cjs');
 
+const app = express();
 
+app.use(express.json());
+app.use('/auth',authRoutes)
+
+const verifierToken = require('./middleware/authMiddleware.cjs')
+app.get('/profil',verifierToken,(req , res)=>{
+    res.json({
+        message:"Bienvenue dans votre espace",
+        utilisateur:req.utilisateur
+    })
+})
+
+app.listen(process.env.PORT || 3000,()=>{
+    console.log('serveur demarre sur le port 3000')
+})
